@@ -49,4 +49,8 @@ export default{
   .swiper-img{
     width: 100%;
   }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> origin/index-icons
