@@ -2,8 +2,8 @@
   <!--修复轮播图片还没有加载出来出现的抖动，加一个div区域，设置div的样式-->
   <div class="wrapper">
   <!--首页轮播图-->
-  <swiper :options="swiperOption">
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+  <swiper :options="swiperOption" v-if="showSwiper">
+      <swiper-slide v-for="item of list" :key="item.id">
       <img class="swiper-img " :src="item.imgUrl"/>
 
       </swiper-slide>
@@ -18,20 +18,20 @@
 <script>
 export default{
   name:'HomeSwiper',
+  props:{
+    list: Array
+  },
   data () {
     return{
      swiperOption:{
        pagination:".swiper-pagination",
        loop:true
-     },
-     swiperList:[{
-       id:"oo1",
-       imgUrl:"https://imgs.qunarzz.com/vs_ceph_vcimg/b8c4527c41649814cc4cf86880abba54.jpeg"
-     },
-     {
-       id:"oo2",
-       imgUrl:"https://imgs.qunarzz.com/vs_ceph_vcimg/1cfbdaa2682ada2f854ea6114b3677c8.jpeg"
-     }]
+     }
+    }
+  },
+  computed:{
+    showSwiper () {
+      return this.list.length
     }
   }
 }
@@ -53,4 +53,3 @@ export default{
 </style>
 
 </style>
-
