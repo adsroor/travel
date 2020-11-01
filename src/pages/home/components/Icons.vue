@@ -87,6 +87,7 @@
     overflow: hidden;
     height: 0;
     padding-bottom: 50%;
+    margin-top: 8px;
 
   }
   .icon{
