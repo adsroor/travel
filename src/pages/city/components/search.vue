@@ -21,7 +21,7 @@ export default{
   box-sizing: border-box;;
   width: 100%;
   height: 31px;
-  padding: 0 1px;
+  padding: 0 2px;
   line-height: 31px;
   text-align: center;
   border-radius: 1px;
