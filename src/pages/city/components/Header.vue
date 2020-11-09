@@ -1,8 +1,11 @@
 <template>
   <div class="header">城市选择
+  <router-link to="/">
+
   <div class="header-left">
     返回
   </div>
+  </router-link>
   </div>
 
 </template>
@@ -21,7 +24,7 @@ export default{
     line-height: 43px;
     text-align: center;
     color: #fff;
-    background: #42B983;
+   background: #00bcd4;
   }
   .header-left{
     position: absolute;
