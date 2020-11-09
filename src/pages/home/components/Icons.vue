@@ -16,8 +16,17 @@
 
 <script>
  export default{
-   name:"HomeIcons",
-
+   name: 'HomeIcons',
+    props: {
+      list: Array
+    },
+    data () {
+      return {
+        swiperOption: {
+          autoplay: false
+        }
+      }
+    },
    data () {
      return {
        iconList:[
