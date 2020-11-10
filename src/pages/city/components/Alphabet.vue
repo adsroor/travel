@@ -3,9 +3,7 @@
     <li class="item">A</li>
     <li class="item">A</li>
     <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
+   
 </ul>
 </template>
 
@@ -25,7 +23,6 @@ export default{
     right:0;
     bottom: 0;
     width: 20px;
-
 }
   .item{
   line-height: 22px;
