@@ -3,7 +3,7 @@
   <router-link to="/">
 
   <div class="header-left">
-    返回
+   <span class="iconfont">&#xe67c;</span>
   </div>
   </router-link>
   </div>
