@@ -2,7 +2,7 @@
 <div>
   <home-header :city="city"></home-header>
   <home-swiper :list="swiperList"></home-swiper>
-  <home-icons></home-icons>
+  <home-icons :list="iconList"></home-icons>
   <HomeRecommend :list="recommendList"></HomeRecommend>
   <home-weekend :list="weekendList"></home-weekend>
 </div>
@@ -39,6 +39,7 @@ export default{
     getHomeInfo(){
       //后端接口
       axios.get('/api/index.json')
+      //promise
       .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res){
