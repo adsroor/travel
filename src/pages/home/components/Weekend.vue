@@ -6,7 +6,12 @@
       <div class="item-img-wrapper">
         <img  class="item-img"  :src="item.imgUrl"/>
       </div>
+      <div class="item-info">
+        <p class="item-title">{{item.title}}</p>
+        <p class="item-desc">{{item.desc}}</p>
+        <button class="item-button">查看详情</button>
 
+      </div>
     </li>
 </ul>
   </div>
@@ -18,38 +23,51 @@
     props:{
       list: Array
     }
-    }
 
 
 
+  }
 </script>
 
 <style>
   .title{
-
     line-height: 40px;
     background: #eee;
-    text-indent: 2px;
+    text-align: 2px;
   }
   .item-img-wrapper{
     overflow: hidden;
-    height: 0;
-    padding-bottom: 37.09%;
+    display: flex;
+    height: 94px;
+    padding-bottom: 33.9%;
+
+
   }
- .item-img{
-    width: 100%;
+  .item-img{
+    width: 130px;
+    height: 120px;
+    padding: 5px;
 
 }
-
+ .item-info{
+   flex: 1;
+   padding:10px;
+ }
  .item-title{
     line-height: 40px;
     font-size: 23px;
  }
  .item-desc{
-
+   margin-top: 2px;
    line-height: 4px;
    color: #ccc;
-
  }
-
+ .item-button{
+   line-height: 9ox;
+   margin-top: 10px;
+   background: #ff9300;
+   padding: 1px;
+   border-radius: 2px;
+   color: #fff;
+ }
 </style>

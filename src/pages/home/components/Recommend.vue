@@ -10,13 +10,9 @@
         <p class="item-title">{{item.title}}</p>
         <p class="item-desc">{{item.desc}}</p>
         <button class="item-button">查看详情</button>
-
-      </div>
+ </div>
     </li>
-
-
-
-  </ul>
+</ul>
   </div>
 </template>
 
@@ -26,10 +22,7 @@
     props:{
       list: Array
     }
-   
-
-
-  }
+}
 </script>
 
 <style>
@@ -42,12 +35,10 @@
     overflow: hidden;
     display: flex;
     height: 94px;
-
-
-  }
+ }
   .item-img{
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     padding: 1px;
 
 }
