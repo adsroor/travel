@@ -29,7 +29,7 @@ export default{
     return {
       city:'',
       swiperList: [],
-      iconsList: [],
+      iconList: [],
       recommendList: [],
       weekendList: []
     }
@@ -48,7 +48,7 @@ export default{
         const data = res.data
         this.city = data.city
         this.swiperList = data.swiperList
-        this.iconsList = data.iconsList
+        this.iconList = data.iconList
         this.recommendList = data.recommendList
         this.weekendList = data.weekendList
       }
