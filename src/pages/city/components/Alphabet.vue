@@ -2,11 +2,11 @@
 <ul class="list">
     <li class="item"
     v-for="(item, key) of cities"
-    :key="key">
+    :key="key"
+    @cick="handleLetterClick"
+    >
     {{key}}
     </li>
-
-
 </ul>
 </template>
 
@@ -15,6 +15,11 @@ export default{
   name:"CityAlphabet",
   props:{
     cities: Object
+  },
+  methods:{
+    handleLetterClick (e) {
+      console.log(e.target.innerText)
+    }
   }
  }
 </script>
