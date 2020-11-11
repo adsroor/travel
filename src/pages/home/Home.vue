@@ -61,7 +61,6 @@ export default{
   //挂载
   mounted () {
     this.lastCity = this.city
-    this.getHomeInfo()
   },
   activated () {
    if(this.lastCity !== this.city)
