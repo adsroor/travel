@@ -23,10 +23,7 @@
     props:{
       list: Array
     }
-
-
-
-  }
+}
 </script>
 
 <style>
