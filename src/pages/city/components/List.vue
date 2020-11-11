@@ -6,7 +6,7 @@
      <div class="button-list">
        <div class="button-wrapper">
          <div class="button">
-         {{this.$store.state.city}}
+         {{this.currentCity}}
          </div>
        </div>
 
@@ -46,11 +46,18 @@
 
 <script>
 import Bscroll from 'better-scroll'
+import {mapState } from 'vuex'
 export default{
   name:"CityList",
   props:{
   hot: Array,
-  cities: Object
+  cities: Object,
+
+  },
+  computed:{
+    ...mapState({
+      currentCity:'city'
+    })
   },
   //实现数据共享vuex
   methods:{
