@@ -5,7 +5,9 @@
      <div class="title border-topbottom">当前城市</div>
      <div class="button-list">
        <div class="button-wrapper">
-         <div class="button">北京</div>
+         <div class="button">
+         {{this.$store.state.city}}
+         </div>
        </div>
 
      </div>
@@ -13,22 +15,27 @@
     <div class="area">
     <div class="title border-topbottom">热门城市</div>
     <div class="button-list">
-      <div class="button-wrapper" v-for="item of hot" :key="item.id">
-        <div class="button">{{item.name}}</div>
+      <div class="button-wrapper"
+           v-for="item of hot"
+           :key="item.id"
+           @click="handleCityClick(item.name)">
+        <div class="button">
+        {{item.name}}</div>
       </div>
     </div>
    </div>
    <div class="area"
-   v-for="(item,key) of cities"
-   :key="key">
+        v-for="(item,key) of cities"
+        :key="key">
     <div class="title border-topbottom">
     {{key}}
     </div>
     <div class="item-list">
       <div class="item border-topbottom"
-       v-for="innerItem of item"
-       :key="innerItem.id">
-       {{innerItem.name}}
+           v-for="innerItem of item"
+           :key="innerItem.id"
+           @click="handleCityClick(innerItem.name)">
+           {{innerItem.name}}
        </div>
       </div>
  </div>
@@ -45,10 +52,16 @@ export default{
   hot: Array,
   cities: Object
   },
-
-  updated () {
+  //实现数据共享vuex
+  methods:{
+    handleCityClick (city) {
+       this.$store.commit('changeCity', city)
+       this.$router.push('/')
+    }
+  },
+  //右侧字母表滚动
+  mounted () {
   this.scroll = new Bscroll(this.$refs.wrapper)
-
   }
   }
 </script>
@@ -69,7 +82,7 @@ export default{
  }
   .button-wrapper{
     float: left;
-    
+
     width: 33.33%;
 }
   .button{

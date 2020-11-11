@@ -13,7 +13,8 @@
      <ul>
        <li class="search-item border-bottom"
            v-for="item of list"
-           :key="item.id">
+           :key="item.id"
+           @click="handleCityClick(item.name)">
            {{item.name}}
        </li>
        <li class="search-item border-bottom" v-show="hasNoData">
@@ -39,11 +40,13 @@ export default{
       timer:null
     }
   },
+  //没有匹配到数据
   computed:{
     hasNoData () {
       return ! this.list.length
     }
   },
+  //头部搜索显示数据的双向绑定
  watch: {
      keyword () {
        if (this.timer) {
@@ -53,7 +56,6 @@ export default{
                this.list = []
                return
              }
-
        this.timer = setTimeout(() => {
          const result = []
          for (let i in this.cities) {
@@ -66,22 +68,24 @@ export default{
          this.list = result
        }, 100)
      }
-
-
+   },
+   //实现数据共享vuex
+   methods:{
+     handleCityClick (city) {
+        this.$store.commit('changeCity', city)
+        this.$router.push('/')
+     }
    },
    mounted () {
        this.scroll = new Bscroll(this.$refs.search)
        }
    }
-
 </script>
-
 <style scoped>
 .search{
   height: 36px;
   padding: 0 1px;
   background: #00bcd4;
-
 }
 .search-input{
   box-sizing: border-box;

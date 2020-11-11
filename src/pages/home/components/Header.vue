@@ -6,91 +6,63 @@
 <div class="header-input">
   <span class="iconfont">&#xe602;</span>
   输入城市/景点/游玩主题
-
 </div>
 <router-link to="/city">
 <div class="header-right">
-  北京
+  {{this.$store.state.city}}
   <span class="iconfont">&#xe648;</span>
 </div>
-
 </router-link>
 </div>
 </template>
 <script>
 export default{
-  name:'HomeHeader',
-  props:{
-    city: String
-  }
+  name:'HomeHeader'
 }
 </script>
 <style scoped>
-    .header{
+     .header{
          display: flex;
          line-height: 43px;
          background: #00bcd4;
          color:#fff;
     }
-
-
-    .header-left{
+     .header-left{
       width: 64px;
       float: left;
       text-align: center;
-
-
-
-    }
-
-
-    .header-input{
+       }
+     .header-input{
        flex:1;
        height: 32px;
-
        line-height: 32px;
        margin: 2px;
-
        padding-left: 15px;
        background: #fff;
        border-radius: 20px;
-
        color: #ccc;
     }
-
     .header-right{
-           width: 64px;
+          min-width: 64px;
+          padding: 0 10px;
            float: right;
            text-align:center;
            color: #fff;
     }
-
-
-
-
     .header-left{
       width: 64px;
       float: left;
       text-align: center;
-
-
     }
-
-
     .header-input{
        flex:1;
        height: 32px;
-
        line-height: 32px;
        margin: 5px;
-
-
        background: #fff;
        border-radius: 20px;
-
        color: #ccc;
     }
-
     .header-right{
            width: 64px;
            float: right;
