@@ -84,7 +84,7 @@ export default{
 
 }
 .search-input{
-  box-sizing: border-box;;
+  box-sizing: border-box;
   width: 100%;
   height: 31px;
   padding: 0 2px;
@@ -106,7 +106,8 @@ export default{
  }
 .search-item{
   line-height: 31px;
-  padding-left: 10px;background: #fff;
+  padding-left: 10px;
+  background: #fff;
   color: #666;
 }
 
