@@ -1,6 +1,6 @@
 {
   "ret": true,
-  "data": {    
+  "data": {
     "swiperList": [{
         "id": "0001",
         "imgUrl": "http://img1.qunarzz.com/piao/fusion/1801/1a/94428c6dea109402.jpg_640x200_2cf590d8.jpg"
@@ -97,6 +97,11 @@
         "imgUrl": "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
         "title": "学生最爱的博物馆",
         "desc": "周末干嘛？北京很多博物馆已经免费开放啦"
+      }, {
+        "id": "0005",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/b2/fde1bfcd057a52.jpg_r_640x214_bbf3fa44.jpg",
+        "title": "儿童剧场，孩子的乐园",
+        "desc": "带宝贝观看演出，近距离体验艺术的无穷魅力"
       }]
   }
 }
