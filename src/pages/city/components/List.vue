@@ -46,7 +46,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
-import {mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default{
   name:"CityList",
   props:{
@@ -60,12 +60,13 @@ export default{
     })
   },
   //实现数据共享vuex
-  methods:{
-    handleCityClick (city) {
-       this.$store.commit('changeCity', city)
-       this.$router.push('/')
-    }
-  },
+   methods: {
+      handleCityClick (city) {
+        this.changeCity(city)
+        this.$router.push('/')
+      },
+      ...mapMutations(['changeCity'])
+    },
   //右侧字母表滚动
   mounted () {
   this.scroll = new Bscroll(this.$refs.wrapper)
