@@ -5,11 +5,8 @@
     :key="key">
     {{key}}
     </li>
-
-
 </ul>
 </template>
-
 <script>
 export default{
   name:"CityAlphabet",
@@ -18,7 +15,6 @@ export default{
   }
  }
 </script>
-
 <style scoped>
   .list{
     display: flex;

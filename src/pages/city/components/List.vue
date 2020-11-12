@@ -9,7 +9,6 @@
          {{this.currentCity}}
          </div>
        </div>
-
      </div>
     </div>
     <div class="area">
@@ -41,9 +40,7 @@
  </div>
   </div>
   </div>
-
 </template>
-
 <script>
 import Bscroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
@@ -52,7 +49,6 @@ export default{
   props:{
   hot: Array,
   cities: Object,
-
   },
   computed:{
     ...mapState({
@@ -68,12 +64,13 @@ export default{
       ...mapMutations(['changeCity'])
     },
   //右侧字母表滚动
-  mounted () {
-  this.scroll = new Bscroll(this.$refs.wrapper)
-  }
+   mounted () {
+      this.scroll = new Bscroll(this.$refs.wrapper, {
+        click: true
+      })
+    }
   }
 </script>
-
 <style scoped>
    .list{
      overflow: hidden; }
@@ -90,7 +87,6 @@ export default{
  }
   .button-wrapper{
     float: left;
-
     width: 33.33%;
 }
   .button{
@@ -99,12 +95,10 @@ export default{
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 3px;
-
   }
   .item{
     line-height: 37px;
     padding-left: 10px;
     color: #666;
   }
-
 </style>
