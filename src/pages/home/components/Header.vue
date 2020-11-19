@@ -1,6 +1,7 @@
 <template>
 <div class="header">
 <div class="header-left">
+  <!--首页iconfont的使用-->
   <span class="iconfont ">&#xe67c;</span>
 </div>
 <div class="header-input">
