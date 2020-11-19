@@ -1,4 +1,5 @@
 <template>
+	<!--字母表滚动组件-->
 <ul class="list">
     <li class="item"
     v-for="(item, key) of cities"
