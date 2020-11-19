@@ -41,6 +41,7 @@
   </div>
   </div>
 </template>
+<!--字母表滚动插件-->
 <script>
 import Bscroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
