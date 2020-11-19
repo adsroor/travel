@@ -24,7 +24,7 @@ export default {
 }
 </script>
 <style scoped>
-  .item-title-icon{
+    .item-title-icon{
       position: relative;
       left: 3.3px;
       top: 3.3px;
