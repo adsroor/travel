@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
 	<!--字母表滚动组件-->
-=======
-  <!--字母表滚动组件-->
->>>>>>> city-components
 <ul class="list">
     <li class="item"
     v-for="(item, key) of cities"
