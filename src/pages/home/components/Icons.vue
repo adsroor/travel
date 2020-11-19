@@ -1,4 +1,5 @@
 <template>
+  <!--首页iconfont图标的使用-->
   <div class="icons">
     <swiper>
       <swiper-slide>
