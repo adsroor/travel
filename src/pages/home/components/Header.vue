@@ -16,6 +16,7 @@
 </router-link>
 </div>
 </template>
+<!--使用vue的状态管理模式-->
 <script>
 import {mapState } from 'vuex'
 export default{
