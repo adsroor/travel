@@ -1,15 +1,13 @@
 <template>
+  <!--字母表滚动组件-->
 <ul class="list">
     <li class="item"
     v-for="(item, key) of cities"
     :key="key">
     {{key}}
     </li>
-
-
 </ul>
 </template>
-
 <script>
 export default{
   name:"CityAlphabet",
@@ -18,7 +16,6 @@ export default{
   }
  }
 </script>
-
 <style scoped>
   .list{
     display: flex;
@@ -36,5 +33,4 @@ export default{
   color: #00bcd4;
 
 }
-
 </style>
