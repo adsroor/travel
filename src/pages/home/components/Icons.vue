@@ -6,6 +6,7 @@
        v-for="(page, index) of pages"
         :key="index"
       >
+      <!--页面跳转-->
     <router-link
     class="icon"
     v-for="item of page"
